@@ -1,0 +1,16 @@
+# 关闭 git 的换行符自动转换。
+#
+# 原因：本仓库是「原样搬运」的资料库，承诺与 up 主发放的文件逐字节一致。
+# Windows 上常见的 core.autocrlf=true 会把 CRLF 静默归一成 LF，
+# 导致 clone / zip 出来的字节和原始文件不同（实测 3 份 LICENSE.txt 就是这样变的）。
+# `-text` 让 git 对**所有**文件都不做换行转换、不做文本属性推断，存进去什么字节就取出来什么字节。
+* -text
+
+# 二进制标记：让 GitHub 与 git diff 不去尝试解析这些文件
+*.jpg binary
+*.jpeg binary
+*.png binary
+*.gif binary
+*.mp4 binary
+*.webp binary
+*.zip binary
