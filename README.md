@@ -91,6 +91,7 @@
 ├── .gitattributes           ← 新增：锁定换行符，保证 clone 出来字节不变
 ├── docs/
 │   ├── images/              ← 新增：本 README 的 6 张配图（截自原视频）
+│   ├── M系列8条空缺-溯源报告.md ← 新增：证明那 8 条原件即空的证据链
 │   └── agents/workspace.yaml ← 无关文件：issue 插件的工作区配置
 ├── 风格提示词/              ← 341 种风格，10 个系列子目录
 │   └── README.md            ← 新增：341 条的完整索引
@@ -121,12 +122,13 @@ up 主在视频和 [`说明.md`](说明.md) 里的原话约定：
 
 ## 两点如实说明
 
-1. **M 系列有 8 条是空的，且这是原件本来如此、不是搬运丢失**：`M14_.md`、`M15_.md`、`M16_.md`、`M17_.md`、`M26_.md`、`M35_.md`、`M39_.md`、`M40_.md` 各 81 字节，只有模板骨架、没有名字也没有正文，所以 M 标称 40 种、实际可用 32 种。已做过溯源：up 主自己的 `风格挑选.html` 内嵌数据里这 8 条同样 `name:""` 且**根本没有 `prompt` 字段**；另一个**独立**搬运的镜像仓库 [wqb578/code-animation-341-styles](https://github.com/wqb578/code-animation-341-styles)（非 fork）里这 8 个文件的 blob SHA 与本地逐个相同。两份独立下载字节一致，排除了下载或解压损坏。证据链见 [docs/M系列8条空缺-溯源报告.md](docs/M系列8条空缺-溯源报告.md)。**本仓库按原样保留、未删改，也没有用他人内容冒充原作填进去**——若你手上有更新版的原包，欢迎开 issue 提供。
+1. **M 系列有 8 条是空的，且这是原件本来如此、不是搬运丢失**：`M14_.md`、`M15_.md`、`M16_.md`、`M17_.md`、`M26_.md`、`M35_.md`、`M39_.md`、`M40_.md` 各 81 字节，只有模板骨架、没有名字也没有正文，所以 M 标称 40 种、实际可用 32 种。已做过溯源（六条独立证据）：up 主自己的 `风格挑选.html` 内嵌数据里这 8 条同样 `name:""` 且**根本没有 `prompt` 字段**；**独立**搬运的镜像仓库 [wqb578/code-animation-341-styles](https://github.com/wqb578/code-animation-341-styles)（非 fork）里这 8 个文件的 blob SHA 与本地逐个相同；另一条获取路径的逐文件 SHA256 清单里这 8 条也全部一致。多份独立下载字节相同，排除了下载或解压损坏。B 站评论区亦无勘误或补发。完整证据链见 [docs/M系列8条空缺-溯源报告.md](docs/M系列8条空缺-溯源报告.md)。**本仓库按原样保留、未删改，也没有用他人内容冒充原作填进去**——若你手上有更新版的原包，欢迎开 issue 提供。
+   > 附带提醒：网上另有一份 `source-manifest.json` 自称记录了原始 zip 的逐文件哈希，但它里面 `许可与来源.md` 的哈希对应的是**该仓库自己删改了"禁止包装成课程、付费 skills 出售"那句之后**的版本，不是原件。本仓库该文件与搬运前快照 md5 相同（`66e1e093…`），up 主原句完整。核对指纹请以本仓库或 wqb578 那份为准。
 2. **`docs/agents/workspace.yaml` 与动画无关**，是搬运时用的 issue 插件自动写入的工作区配置，留着是为了让仓库和插件配合可复现。
 
 ## 下载全部源文件
 
-到 [Releases](releases) 页面下载 **`code-animation-341-styles-v1.0.0.zip`**（或页面底部的 `Source code (zip)`），解压即用。
+到 [Releases](https://github.com/mengxing123456789/code-animation-341-styles/releases) 页面下载 **`code-animation-341-styles-v1.0.0.zip`**（或页面底部的 `Source code (zip)`），解压即用。
 
 本仓库配置了 `.gitattributes`（`* -text`），**关闭了 git 的换行符自动转换**，所以 clone 或 zip 下载得到的每个文件与 up 主发放的原始字节**逐字节一致**（已用 md5 对全部 556 个原文件校验通过）。
 
